@@ -4,7 +4,8 @@ public class MergeSort {
         if (tamanhoArry < 2) {
             return;
         }
-        int indiceMedio = tamanhoArry / 2;
+
+        int indiceMedio = tamanhoArry / 2; 
         int[] left = new int[indiceMedio];
         int[] right = new int[tamanhoArry - indiceMedio];
 
