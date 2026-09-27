@@ -1,23 +1,9 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args){
-        int registros = 200;
-        Random r = new Random();
-        String caminho = "entrada.txt";
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(caminho))) {
-            for (int i = 0; i < registros; i++) {
-                int numeroAleatorio = r.nextInt(1000);
-                bw.write(Integer.toString(numeroAleatorio));
-                bw.newLine();
-            }
-            bw.close();
-        } catch (IOException exception) {
-            System.out.println(exception);
-        }
+        
+        GerarNumeros numeros = new GerarNumeros();
+        numeros.gerador("entrada.txt", 200);
+    
     }
 }
